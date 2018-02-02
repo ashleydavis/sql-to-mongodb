@@ -15,11 +15,16 @@ async function replicateTable (tableName, primaryKeyField, targetDb, sqlPool) {
 
     const collection = targetDb.collection(tableName);
     
-    const query = "select * from " + tableName;
+    const query = "select * from [" + tableName + "]";
     console.log("Executing query: " + query);
     const tableResult = await sqlPool.request().query(query);
 
     console.log("Got " + tableResult.recordset.length + " records from table " + tableName);
+
+    if (tableResult.recordset.length === 0) {
+        console.log('No records to transfer.');
+        return;
+    }
 
     const bulkRecordInsert = E.from(tableResult.recordset)
         .select(row => {
