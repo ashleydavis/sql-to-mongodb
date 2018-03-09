@@ -29,6 +29,7 @@ async function replicateTable (tableName, primaryKeyField, targetDb, sqlPool) {
     const bulkRecordInsert = E.from(tableResult.recordset)
         .select(row => {
             row._id = row[primaryKeyField];
+            delete row[primaryKeyField];
             return {
                 updateOne: {
                     filter: { _id: row._id },
@@ -63,6 +64,7 @@ async function main () {
 
     const tableNames = E.from(tablesResult.recordset)
         .select(row => row.TABLE_NAME)
+        .where(tableName => config.skip && config.skip.indexOf(tableName) === -1)
         .distinct()
         .toArray();
 
