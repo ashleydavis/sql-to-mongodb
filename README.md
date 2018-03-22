@@ -1,6 +1,6 @@
 # sql-to-mongodb
 
-A Node.js script to convert an SQL table to a MongoDB database.
+A Node.js script to convert an SQL database to a MongoDB database.
 
 Features
 
