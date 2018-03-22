@@ -10,21 +10,25 @@ Features
 
 ## Usage
 
+### Install 
+
 First install dependencies:
 
     npm install
 
-Setup:
+### Setup
 
 Edit config.js. Add the connection string for your SQL database. Modify the MongoDB connection string if necessary. Set the name of your target database in MongoDB.
 
-Run:
+### Run
 
     node index.js
 
-Wait:
+### Wait
 
 It might take some time to replicate!
+
+## More!
 
 Find more like this in my new book [Data Wrangling with JavaScript](http://bit.ly/2t2cJu2)
     
