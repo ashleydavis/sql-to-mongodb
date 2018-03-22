@@ -4,9 +4,9 @@ A Node.js script to convert an SQL table to a MongoDB database.
 
 Features
 
-    Automatically detects the primary key for each SQL table and copys it to the MongoDB _id field.
-
-    Automatically copies across types correctly (eg numbers and dates).
+- Automatically detects the primary key for each SQL table and copys it to the MongoDB _id field.
+- Optionally remaps replaces and primary keys with MongoDB ObjectId's and remaps foreign keys.
+- Automatically copies across types correctly (eg numbers and dates).
 
 ## Usage
 
@@ -25,4 +25,6 @@ Run:
 Wait:
 
 It might take some time to replicate!
+
+Find more like this in my new book [Data Wrangling with JavaScript](http://bit.ly/2t2cJu2)
     
