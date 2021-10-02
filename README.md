@@ -2,6 +2,8 @@
 
 A Node.js script to convert an SQL database to a MongoDB database.
 
+If you like this project, please star this repo and [support my work](https://www.codecapers.com.au/about#support-my-work)
+
 Features
 
 - Automatically detects the primary key for each SQL table and copys it to the MongoDB _id field.
